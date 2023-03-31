@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PatientPageView" customModule="MyPrescription" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="i4B-0O-aC3" id="gQT-4B-VlA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i4B-0O-aC3">
+                    <rect key="frame" x="0.0" y="114" width="393" height="704"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNB-Be-pGV">
+                    <rect key="frame" x="20" y="69" width="151" height="34"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5g-Tf-4Nv">
+                    <rect key="frame" x="303" y="69" width="70" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="c7a-Dg-nVm"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemOrangeColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                    <connections>
+                        <action selector="addPatientTapped:" destination="-1" eventType="touchUpInside" id="X2S-D3-xEA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="kOw-vx-EDp"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="a5g-Tf-4Nv" firstAttribute="top" secondItem="kOw-vx-EDp" secondAttribute="top" constant="10" id="6Eg-h7-9Kh"/>
+                <constraint firstItem="i4B-0O-aC3" firstAttribute="leading" secondItem="kOw-vx-EDp" secondAttribute="leading" id="G0c-8c-06g"/>
+                <constraint firstItem="i4B-0O-aC3" firstAttribute="bottom" secondItem="kOw-vx-EDp" secondAttribute="bottom" id="bNE-EN-gGo"/>
+                <constraint firstItem="i4B-0O-aC3" firstAttribute="trailing" secondItem="kOw-vx-EDp" secondAttribute="trailing" id="dT4-ho-FCx"/>
+                <constraint firstItem="kOw-vx-EDp" firstAttribute="trailing" secondItem="a5g-Tf-4Nv" secondAttribute="trailing" constant="20" id="tUR-Sh-t6O"/>
+                <constraint firstItem="QNB-Be-pGV" firstAttribute="leading" secondItem="kOw-vx-EDp" secondAttribute="leading" constant="20" id="vbK-NW-KYB"/>
+                <constraint firstItem="QNB-Be-pGV" firstAttribute="top" secondItem="kOw-vx-EDp" secondAttribute="top" constant="10" id="yce-gZ-Fry"/>
+                <constraint firstItem="i4B-0O-aC3" firstAttribute="top" secondItem="a5g-Tf-4Nv" secondAttribute="bottom" constant="10" id="ylP-Cc-nD4"/>
+            </constraints>
+            <point key="canvasLocation" x="32.824427480916029" y="54.225352112676056"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

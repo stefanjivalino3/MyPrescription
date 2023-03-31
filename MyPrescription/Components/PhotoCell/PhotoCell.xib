@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PhotoCell" customModule="MyPrescription" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicine Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKl-2h-bsa">
+                        <rect key="frame" x="20" y="10" width="280" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="KKl-2h-bsa" secondAttribute="height" multiplier="56:3" id="BTU-8V-tdy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wxV-hx-BGF">
+                        <rect key="frame" x="20" y="31.000000000000007" width="100" height="127.66666666666669"/>
+                        <color key="tintColor" red="1" green="0.76673043610000002" blue="0.1273645675" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="seI-Lj-31T"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Err-D3-OlY">
+                        <rect key="frame" x="189" y="65" width="111" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4M-yH-yAZ">
+                                <rect key="frame" x="15" y="0.0" width="81" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dT-og-Lx7">
+                                <rect key="frame" x="0.0" y="0.0" width="111" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="takePhotoTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Dmw-Jg-kJp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52156862749999999" green="0.56470588239999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3dT-og-Lx7" secondAttribute="bottom" id="1Bm-JU-ukR"/>
+                            <constraint firstAttribute="trailing" secondItem="3dT-og-Lx7" secondAttribute="trailing" id="4iU-4y-KtG"/>
+                            <constraint firstItem="3dT-og-Lx7" firstAttribute="top" secondItem="Err-D3-OlY" secondAttribute="top" id="CVq-IH-ym4"/>
+                            <constraint firstItem="S4M-yH-yAZ" firstAttribute="top" secondItem="Err-D3-OlY" secondAttribute="top" id="Do1-GD-kBC"/>
+                            <constraint firstAttribute="bottom" secondItem="S4M-yH-yAZ" secondAttribute="bottom" id="JIz-EW-fCd"/>
+                            <constraint firstItem="S4M-yH-yAZ" firstAttribute="leading" secondItem="Err-D3-OlY" secondAttribute="leading" constant="15" id="bhe-Js-5UX"/>
+                            <constraint firstAttribute="height" constant="40" id="hnb-1F-XR1"/>
+                            <constraint firstAttribute="trailing" secondItem="S4M-yH-yAZ" secondAttribute="trailing" constant="15" id="rUj-dE-G1B"/>
+                            <constraint firstItem="3dT-og-Lx7" firstAttribute="leading" secondItem="Err-D3-OlY" secondAttribute="leading" id="tcc-xY-m6w"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Err-D3-OlY" secondAttribute="trailing" constant="20" id="0DY-7D-lMQ"/>
+                    <constraint firstItem="Err-D3-OlY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FmA-kd-bbE"/>
+                    <constraint firstItem="wxV-hx-BGF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Niq-yK-cQl"/>
+                    <constraint firstItem="wxV-hx-BGF" firstAttribute="top" secondItem="KKl-2h-bsa" secondAttribute="bottom" constant="5" id="al0-b1-dOI"/>
+                    <constraint firstAttribute="bottom" secondItem="wxV-hx-BGF" secondAttribute="bottom" constant="10" id="cet-5V-i6h"/>
+                    <constraint firstItem="KKl-2h-bsa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="fX6-ui-kyW"/>
+                    <constraint firstAttribute="trailing" secondItem="KKl-2h-bsa" secondAttribute="trailing" constant="20" id="lSw-If-yBg"/>
+                    <constraint firstItem="KKl-2h-bsa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="zIH-FU-zPr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="buttonView" destination="Err-D3-OlY" id="V9K-Ff-8ZN"/>
+                <outlet property="photoImageView" destination="wxV-hx-BGF" id="4e7-XT-ODc"/>
+            </connections>
+            <point key="canvasLocation" x="-154.19847328244273" y="-13.380281690140846"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
+    </resources>
+</document>
