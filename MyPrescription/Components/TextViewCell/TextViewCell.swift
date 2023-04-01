@@ -14,6 +14,7 @@ protocol TextViewCellDelegate: AnyObject {
 class TextViewCell: UITableViewCell, UITextViewDelegate {
     weak var delegate: TextViewCellDelegate?
     var indexPath: IndexPath?
+    var placeHolderString: String = ""
     var didCheckEditing: (() -> ())?
     
     @IBOutlet weak var textViewBg: UIView!
@@ -29,8 +30,12 @@ class TextViewCell: UITableViewCell, UITextViewDelegate {
         textViewBg.layer.cornerRadius = 12
     }
     
-    func configure(title: String) {
+    func configure(title: String, placeHolder: String) {
         titleLabel.text = title
+        
+        textView.text = placeHolder
+        placeHolderString = placeHolder
+        textView.textColor = UIColor.lightGray
     }
     
     func textViewDidChange(_ textView: UITextView) {
@@ -38,7 +43,18 @@ class TextViewCell: UITableViewCell, UITextViewDelegate {
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = placeHolderString
+            textView.textColor = UIColor.lightGray
+        }
         didCheckEditing?()
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
     }
     
 }

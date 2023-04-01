@@ -110,7 +110,7 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueCell(with: TextFieldCell.self)!
             cell.selectionStyle = .none
-            cell.configure(title: "Full Name")
+            cell.configure(title: "Full Name", placeHolder: "ex. Budi Sudarsono")
             cell.delegate = self
             cell.indexPath = indexPath
             
@@ -160,7 +160,7 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
             cell.selectionStyle = .none
             cell.delegate = self
             cell.indexPath = indexPath
-            cell.configure(title: "Description")
+            cell.configure(title: "Description", placeHolder: "ex. Demam & meriang")
             cell.didCheckEditing = { [weak self] in
                 self?.checkDataFilled()
             }
@@ -176,7 +176,7 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
             cell.selectionStyle = .none
             cell.delegate = self
             cell.indexPath = indexPath
-            cell.configure(title: "Prescription")
+            cell.configure(title: "Prescription", placeHolder: "ex. Paracetamol 500mg, 12 tablet 3x sehari\nPanadol 1 Strip")
             cell.didCheckEditing = { [weak self] in
                 self?.checkDataFilled()
             }

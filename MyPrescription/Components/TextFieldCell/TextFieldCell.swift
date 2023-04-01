@@ -26,8 +26,9 @@ class TextFieldCell: UITableViewCell, UITextFieldDelegate {
         inputTextField.delegate = self
     }
     
-    func configure(title: String) {
+    func configure(title: String, placeHolder: String) {
         titleLabel.text = title
+        inputTextField.placeholder = placeHolder
     }
     
     @IBAction func textFieldDidChange(_ sender: Any) {

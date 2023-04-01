@@ -25,7 +25,7 @@
                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0h-nn-GJU">
                         <rect key="frame" x="20" y="30.666666666666668" width="280" height="59.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                         <connections>
                             <action selector="didEndEditing:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="7RI-Qn-OuJ"/>
                             <action selector="textFieldDidChange:" destination="KGk-i7-Jjw" eventType="valueChanged" id="wNR-dD-8wl"/>
