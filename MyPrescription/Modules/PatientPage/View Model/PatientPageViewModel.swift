@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 class PatientPageViewModel {
 
     private let service: PatientPageServiceProtocol
 
+    var patientData = [PatientItem]()
     private var model: [PatientPageModel] = [PatientPageModel]() {
         didSet {
             self.count = self.model.count
@@ -19,6 +21,7 @@ class PatientPageViewModel {
 
     /// Count your data in model
     var count: Int = 0
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     //MARK: -- Network checking
 
@@ -70,6 +73,15 @@ class PatientPageViewModel {
     //MARK: Internet monitor status
     @objc func networkStatusChanged(_ notification: Notification) {
         self.networkStatus = Reach().connectionStatus()
+    }
+    
+    func getPatientList() {
+        do {
+            patientData = try context.fetch(PatientItem.fetchRequest())
+            didGetData?()
+            
+        }
+        catch {}
     }
 
     

@@ -14,8 +14,9 @@ class AddPatientView: UIViewController {
     
     // VARIABLES HERE
     var viewModel = AddPatientViewModel()
-    var patientData = PatientDataModel()
+    var patientData =   PatientDataModel()
     var photoImage: UIImage = UIImage(systemName: "camera") ?? UIImage()
+    var isButtonEnabled = false
     
     
 
@@ -41,6 +42,7 @@ class AddPatientView: UIViewController {
         tableView.registerNIB(with: DatePickerCell.self)
         tableView.registerNIB(with: TextViewCell.self)
         tableView.registerNIB(with: PhotoCell.self)
+        tableView.registerNIB(with: ButtonCell.self)
     }
     
     fileprivate func setupViewModel() {
@@ -74,11 +76,22 @@ class AddPatientView: UIViewController {
 
     }
     
+    private func checkDataFilled() {
+        if patientData.fullName != "" && patientData.description != "" && patientData.prescription != "" {
+            isButtonEnabled = true
+        } else {
+            isButtonEnabled = false
+        }
+        
+        let index = IndexPath(row: 6, section: 0)
+        tableView.reloadRows(at: [index], with: .automatic)
+    }
+    
 }
 
 extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 7
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,6 +102,10 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
             cell.configure(title: "Full Name")
             cell.delegate = self
             cell.indexPath = indexPath
+            
+            cell.didCheckEditing = { [weak self] in
+                self?.checkDataFilled()
+            }
             
             return cell
         case 1:
@@ -118,6 +135,9 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
             cell.delegate = self
             cell.indexPath = indexPath
             cell.configure(title: "Description")
+            cell.didCheckEditing = { [weak self] in
+                self?.checkDataFilled()
+            }
             return cell
         case 4:
             let cell = tableView.dequeueCell(with: TextViewCell.self)!
@@ -125,13 +145,37 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
             cell.delegate = self
             cell.indexPath = indexPath
             cell.configure(title: "Prescription")
+            cell.didCheckEditing = { [weak self] in
+                self?.checkDataFilled()
+            }
             return cell
-        default:
+        case 5:
             let cell = tableView.dequeueCell(with: PhotoCell.self)!
             cell.selectionStyle = .none
             cell.delegate = self
             cell.indexPath = indexPath
             cell.photoImageView.image = photoImage
+            return cell
+        default:
+            let cell = tableView.dequeueCell(with: ButtonCell.self)!
+            cell.selectionStyle = .none
+            
+            cell.didSubmit = { [weak self] in
+                self?.viewModel.savePatientData(patientData: self?.patientData ?? PatientDataModel())
+                
+                self?.navigationController?.popToRootViewController(animated: true)
+            }
+            
+            if isButtonEnabled == true {
+                cell.buttonTitle.textColor = UIColor.white
+                cell.buttonView.backgroundColor = UIColor.black
+                cell.submitButton.isUserInteractionEnabled = true
+            } else {
+                cell.buttonTitle.textColor = UIColor.systemGray4
+                cell.buttonView.backgroundColor = UIColor.systemGray2
+                cell.submitButton.isUserInteractionEnabled = false
+            }
+            
             return cell
             
         }
@@ -156,7 +200,9 @@ extension AddPatientView: TextFieldCellDelegate, TextViewCellDelegate, PhotoCell
     
     func getValue(for cell: TextViewCell, value: String) {
         if cell.indexPath?.row == 3 {
-            print(value)
+            patientData.description = value
+        } else if cell.indexPath?.row == 4 {
+            patientData.prescription = value
         }
     }
     
@@ -169,7 +215,7 @@ extension AddPatientView: TextFieldCellDelegate, TextViewCellDelegate, PhotoCell
     
     func getValue(for cell: DatePickerCell, value: Date) {
         if cell.indexPath?.row == 1 {
-            print(value)
+            patientData.birthDate = value.convertedDate
         }
     }
 }
@@ -187,9 +233,11 @@ extension AddPatientView: UIImagePickerControllerDelegate, UINavigationControlle
         }
         
         photoImage = image
+        patientData.medicinePhoto = image.jpegData(compressionQuality: 1) ?? Data()
         
-        
-        tableView.reloadData()
+        let index = IndexPath(row: 6, section: 0)
+        let index2 = IndexPath(row: 5, section: 0)
+        tableView.reloadRows(at: [index,index2], with: .automatic)
     }
 }
 

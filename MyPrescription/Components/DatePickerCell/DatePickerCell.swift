@@ -20,7 +20,6 @@ class DatePickerCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        datePicker.timeZone = TimeZone(secondsFromGMT: 0)
     }
     
     func configure(title: String) {

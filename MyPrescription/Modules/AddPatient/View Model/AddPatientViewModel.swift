@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class AddPatientViewModel {
 
@@ -18,6 +19,7 @@ class AddPatientViewModel {
     }
 
     /// Count your data in model
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var count: Int = 0
 
     //MARK: -- Network checking
@@ -72,7 +74,22 @@ class AddPatientViewModel {
         self.networkStatus = Reach().connectionStatus()
     }
 
-    
+    func savePatientData(patientData: PatientDataModel) {
+        let newItem = PatientItem(context: self.context)
+        
+        newItem.fullName = patientData.fullName
+        newItem.birthDate = patientData.birthDate
+        newItem.visitDate = patientData.visitDate
+        newItem.desc = patientData.description
+        newItem.prescription = patientData.prescription
+        newItem.medicinePhoto = patientData.medicinePhoto
+        
+        do {
+            try context.save()
+        } catch {
+            
+        }
+    }
 
 }
 

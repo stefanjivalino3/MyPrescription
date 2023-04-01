@@ -12,6 +12,7 @@ protocol TextFieldCellDelegate: AnyObject {
 }
 
 class TextFieldCell: UITableViewCell, UITextFieldDelegate {
+    var didCheckEditing: (() -> ())?
     weak var delegate: TextFieldCellDelegate?
     var indexPath: IndexPath?
 
@@ -33,4 +34,7 @@ class TextFieldCell: UITableViewCell, UITextFieldDelegate {
         delegate?.getValue(for: self, value: "\(inputTextField.text ?? "")")
     }
     
+    @IBAction func didEndEditing(_ sender: Any) {
+        didCheckEditing?()
+    }
 }

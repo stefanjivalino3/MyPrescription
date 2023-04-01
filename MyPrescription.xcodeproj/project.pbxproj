@@ -29,6 +29,11 @@
 		0BCF36F629D7707D0009C237 /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF36F429D7707D0009C237 /* TextViewCell.xib */; };
 		0BCF36FA29D777430009C237 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF36F829D777430009C237 /* PhotoCell.swift */; };
 		0BCF36FB29D777430009C237 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF36F929D777430009C237 /* PhotoCell.xib */; };
+		0BD2713C29D79EBF00161D7E /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2713A29D79EBF00161D7E /* ButtonCell.swift */; };
+		0BD2713D29D79EBF00161D7E /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD2713B29D79EBF00161D7E /* ButtonCell.xib */; };
+		0BD2713F29D7AA6B00161D7E /* Date + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2713E29D7AA6B00161D7E /* Date + Ext.swift */; };
+		0BD2714329D7AE3600161D7E /* PatientItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2714129D7AE3600161D7E /* PatientItem+CoreDataClass.swift */; };
+		0BD2714429D7AE3600161D7E /* PatientItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2714229D7AE3600161D7E /* PatientItem+CoreDataProperties.swift */; };
 		0BFAEE3929D74EAC00457070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3829D74EAC00457070 /* AppDelegate.swift */; };
 		0BFAEE3B29D74EAC00457070 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3A29D74EAC00457070 /* SceneDelegate.swift */; };
 		0BFAEE3D29D74EAC00457070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3C29D74EAC00457070 /* ViewController.swift */; };
@@ -77,6 +82,11 @@
 		0BCF36F429D7707D0009C237 /* TextViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewCell.xib; sourceTree = "<group>"; };
 		0BCF36F829D777430009C237 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		0BCF36F929D777430009C237 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		0BD2713A29D79EBF00161D7E /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		0BD2713B29D79EBF00161D7E /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		0BD2713E29D7AA6B00161D7E /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
+		0BD2714129D7AE3600161D7E /* PatientItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PatientItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		0BD2714229D7AE3600161D7E /* PatientItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PatientItem+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		0BFAEE3529D74EAC00457070 /* MyPrescription.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPrescription.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFAEE3829D74EAC00457070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BFAEE3A29D74EAC00457070 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +132,7 @@
 		0BCF36B929D74FEE0009C237 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0BD2713929D79EA900161D7E /* ButtonCell */,
 				0BCF36F729D777320009C237 /* PhotoCell */,
 				0BCF36F229D770670009C237 /* TextViewCell */,
 				0BCF36ED29D76D530009C237 /* DatePickerCell */,
@@ -142,6 +153,7 @@
 		0BCF36BF29D758300009C237 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				0BD2714029D7AE2600161D7E /* PatientItem */,
 				0BCF36C029D758300009C237 /* SignInItem */,
 			);
 			path = CoreData;
@@ -289,6 +301,24 @@
 			path = PhotoCell;
 			sourceTree = "<group>";
 		};
+		0BD2713929D79EA900161D7E /* ButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				0BD2713A29D79EBF00161D7E /* ButtonCell.swift */,
+				0BD2713B29D79EBF00161D7E /* ButtonCell.xib */,
+			);
+			path = ButtonCell;
+			sourceTree = "<group>";
+		};
+		0BD2714029D7AE2600161D7E /* PatientItem */ = {
+			isa = PBXGroup;
+			children = (
+				0BD2714129D7AE3600161D7E /* PatientItem+CoreDataClass.swift */,
+				0BD2714229D7AE3600161D7E /* PatientItem+CoreDataProperties.swift */,
+			);
+			path = PatientItem;
+			sourceTree = "<group>";
+		};
 		0BFAEE2C29D74EAC00457070 = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +448,7 @@
 				0BFAEE6E29D74F3200457070 /* UIViewController + Ext.swift */,
 				0BFAEE6F29D74F3200457070 /* UIImageView + Ext.swift */,
 				0BFAEE7029D74F3200457070 /* StringProtocol + Ext.swift */,
+				0BD2713E29D7AA6B00161D7E /* Date + Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -504,6 +535,7 @@
 				0BFAEE4029D74EAC00457070 /* Main.storyboard in Resources */,
 				0BCF36E929D762A60009C237 /* AddPatientView.xib in Resources */,
 				0BCF36FB29D777430009C237 /* PhotoCell.xib in Resources */,
+				0BD2713D29D79EBF00161D7E /* ButtonCell.xib in Resources */,
 				0BCF36D529D75A900009C237 /* PatientPageView.xib in Resources */,
 				0BFAEE7C29D74F3200457070 /* SignInView.xib in Resources */,
 				0BCF36BE29D7500D0009C237 /* TextFieldCell.xib in Resources */,
@@ -570,10 +602,13 @@
 				0BFAEE8129D74F3200457070 /* BaseTabBarItem.swift in Sources */,
 				0BFAEE3929D74EAC00457070 /* AppDelegate.swift in Sources */,
 				0BCF36E729D762A60009C237 /* AddPatientServiceProtocol.swift in Sources */,
+				0BD2714329D7AE3600161D7E /* PatientItem+CoreDataClass.swift in Sources */,
 				0BFAEE7D29D74F3200457070 /* SignInView.swift in Sources */,
 				0BCF36EC29D762A60009C237 /* AddPatientViewModel.swift in Sources */,
+				0BD2714429D7AE3600161D7E /* PatientItem+CoreDataProperties.swift in Sources */,
 				0BFAEE8629D74F3200457070 /* BaseNavigationController.swift in Sources */,
 				0BCF36F029D76D810009C237 /* DatePickerCell.swift in Sources */,
+				0BD2713C29D79EBF00161D7E /* ButtonCell.swift in Sources */,
 				0BFAEE8729D74F3200457070 /* Reach.swift in Sources */,
 				0BCF36E829D762A60009C237 /* AddPatientModel.swift in Sources */,
 				0BFAEE3B29D74EAC00457070 /* SceneDelegate.swift in Sources */,
@@ -585,6 +620,7 @@
 				0BFAEE8529D74F3200457070 /* StringProtocol + Ext.swift in Sources */,
 				0BCF36FA29D777430009C237 /* PhotoCell.swift in Sources */,
 				0BFAEE7A29D74F3200457070 /* SignInServiceProtocol.swift in Sources */,
+				0BD2713F29D7AA6B00161D7E /* Date + Ext.swift in Sources */,
 				0BCF36C429D758450009C237 /* SignInItem+CoreDataProperties.swift in Sources */,
 				0BFAEE4329D74EAC00457070 /* MyPrescription.xcdatamodeld in Sources */,
 				0BCF36EA29D762A60009C237 /* AddPatientView.swift in Sources */,

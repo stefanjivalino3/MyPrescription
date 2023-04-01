@@ -27,6 +27,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                         <connections>
+                            <action selector="didEndEditing:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="7RI-Qn-OuJ"/>
                             <action selector="textFieldDidChange:" destination="KGk-i7-Jjw" eventType="valueChanged" id="wNR-dD-8wl"/>
                         </connections>
                     </textField>

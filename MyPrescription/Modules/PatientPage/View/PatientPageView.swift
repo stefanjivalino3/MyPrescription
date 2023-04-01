@@ -18,11 +18,14 @@ class PatientPageView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViewModel()
+        self.viewModel.getPatientList()
 //        self.setupTableView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        print("test")
     }
     
     private func setupTableView() {
@@ -57,8 +60,8 @@ class PatientPageView: UIViewController {
             // show UI Server is Error
         }
 
-        self.viewModel.didGetData = {
-            // update UI after get data
+        self.viewModel.didGetData = { [weak self] in
+            print(self?.viewModel.patientData.first?.fullName ?? "")
         }
 
     }
