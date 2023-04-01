@@ -91,7 +91,7 @@ class AddPatientView: UIViewController {
         }
         
         let index = IndexPath(row: 6, section: 0)
-        tableView.reloadRows(at: [index], with: .none)
+        tableView.reloadRows(at: [index], with: .none )
     }
     
 }
@@ -198,6 +198,17 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
                 cell.photoImageView.image = UIImage(data: patientSavedData.medicinePhoto ?? Data())
                 cell.buttonView.isHidden = true
             }
+            
+            cell.didOpenPhoto = { [weak self] in
+                if cell.photoImageView.image != UIImage(systemName: "camera") {
+                    let vc = OpenPhotoView()
+                    vc.photoImage = cell.photoImageView.image
+                    vc.modalPresentationStyle = .fullScreen
+                    self?.present(vc, animated: true)
+                }
+            }
+            
+            
             
             return cell
         default:

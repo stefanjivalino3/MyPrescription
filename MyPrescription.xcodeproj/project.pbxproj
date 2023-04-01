@@ -36,6 +36,8 @@
 		0BD2714429D7AE3600161D7E /* PatientItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2714229D7AE3600161D7E /* PatientItem+CoreDataProperties.swift */; };
 		0BD2714829D7C0D500161D7E /* PatientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2714629D7C0D500161D7E /* PatientCell.swift */; };
 		0BD2714929D7C0D500161D7E /* PatientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD2714729D7C0D500161D7E /* PatientCell.xib */; };
+		0BD2715129D81BB100161D7E /* OpenPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2714F29D81BB100161D7E /* OpenPhotoView.swift */; };
+		0BD2715229D81BB100161D7E /* OpenPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD2715029D81BB100161D7E /* OpenPhotoView.xib */; };
 		0BFAEE3929D74EAC00457070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3829D74EAC00457070 /* AppDelegate.swift */; };
 		0BFAEE3B29D74EAC00457070 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3A29D74EAC00457070 /* SceneDelegate.swift */; };
 		0BFAEE3D29D74EAC00457070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3C29D74EAC00457070 /* ViewController.swift */; };
@@ -91,6 +93,8 @@
 		0BD2714229D7AE3600161D7E /* PatientItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PatientItem+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		0BD2714629D7C0D500161D7E /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCell.swift; sourceTree = "<group>"; };
 		0BD2714729D7C0D500161D7E /* PatientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientCell.xib; sourceTree = "<group>"; };
+		0BD2714F29D81BB100161D7E /* OpenPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPhotoView.swift; sourceTree = "<group>"; };
+		0BD2715029D81BB100161D7E /* OpenPhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenPhotoView.xib; sourceTree = "<group>"; };
 		0BFAEE3529D74EAC00457070 /* MyPrescription.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPrescription.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFAEE3829D74EAC00457070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BFAEE3A29D74EAC00457070 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,12 +140,13 @@
 		0BCF36B929D74FEE0009C237 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				0BD2714529D7C0C300161D7E /* PatientCell */,
 				0BD2713929D79EA900161D7E /* ButtonCell */,
-				0BCF36F729D777320009C237 /* PhotoCell */,
-				0BCF36F229D770670009C237 /* TextViewCell */,
 				0BCF36ED29D76D530009C237 /* DatePickerCell */,
+				0BD2714A29D81B4500161D7E /* OpenPhotoView */,
+				0BD2714529D7C0C300161D7E /* PatientCell */,
+				0BCF36F729D777320009C237 /* PhotoCell */,
 				0BCF36BA29D74FFB0009C237 /* TextFieldCell */,
+				0BCF36F229D770670009C237 /* TextViewCell */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -331,6 +336,15 @@
 				0BD2714729D7C0D500161D7E /* PatientCell.xib */,
 			);
 			path = PatientCell;
+			sourceTree = "<group>";
+		};
+		0BD2714A29D81B4500161D7E /* OpenPhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				0BD2714F29D81BB100161D7E /* OpenPhotoView.swift */,
+				0BD2715029D81BB100161D7E /* OpenPhotoView.xib */,
+			);
+			path = OpenPhotoView;
 			sourceTree = "<group>";
 		};
 		0BFAEE2C29D74EAC00457070 = {
@@ -556,6 +570,7 @@
 				0BCF36BE29D7500D0009C237 /* TextFieldCell.xib in Resources */,
 				0BCF36F129D76D810009C237 /* DatePickerCell.xib in Resources */,
 				0BCF36F629D7707D0009C237 /* TextViewCell.xib in Resources */,
+				0BD2715229D81BB100161D7E /* OpenPhotoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +636,7 @@
 				0BFAEE7D29D74F3200457070 /* SignInView.swift in Sources */,
 				0BCF36EC29D762A60009C237 /* AddPatientViewModel.swift in Sources */,
 				0BD2714429D7AE3600161D7E /* PatientItem+CoreDataProperties.swift in Sources */,
+				0BD2715129D81BB100161D7E /* OpenPhotoView.swift in Sources */,
 				0BFAEE8629D74F3200457070 /* BaseNavigationController.swift in Sources */,
 				0BCF36F029D76D810009C237 /* DatePickerCell.swift in Sources */,
 				0BD2713C29D79EBF00161D7E /* ButtonCell.swift in Sources */,
@@ -799,6 +815,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPrescription/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to access camera to take photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow to access photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -830,6 +847,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPrescription/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to access camera to take photo";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow to access photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

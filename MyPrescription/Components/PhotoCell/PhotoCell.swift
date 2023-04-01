@@ -13,6 +13,7 @@ protocol PhotoCellDelegate: AnyObject {
 class PhotoCell: UITableViewCell {
     weak var delegate: PhotoCellDelegate?
     var indexPath: IndexPath?
+    var didOpenPhoto: (() -> ())?
     
     @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var photoImageView: UIImageView!
@@ -22,6 +23,10 @@ class PhotoCell: UITableViewCell {
         super.awakeFromNib()
         
         buttonView.layer.cornerRadius = 12
+    }
+    
+    @IBAction func imageButtonTapped(_ sender: Any) {
+        didOpenPhoto?()
     }
     
     @IBAction func takePhotoTapped(_ sender: Any) {

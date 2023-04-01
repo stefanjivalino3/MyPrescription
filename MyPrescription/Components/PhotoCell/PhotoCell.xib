@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,13 +26,35 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wxV-hx-BGF">
-                        <rect key="frame" x="20" y="31.000000000000007" width="100" height="127.66666666666669"/>
-                        <color key="tintColor" red="1" green="0.76673043610000002" blue="0.1273645675" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVg-lK-931">
+                        <rect key="frame" x="20" y="30" width="100" height="130"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wxV-hx-BGF">
+                                <rect key="frame" x="0.0" y="0.99999999999999289" width="100" height="127.66666666666666"/>
+                                <color key="tintColor" red="1" green="0.76673043610000002" blue="0.1273645675" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTN-JZ-Hey">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="imageButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mJY-be-6yT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="seI-Lj-31T"/>
+                            <constraint firstAttribute="trailing" secondItem="NTN-JZ-Hey" secondAttribute="trailing" id="CHy-DI-VM2"/>
+                            <constraint firstAttribute="bottom" secondItem="NTN-JZ-Hey" secondAttribute="bottom" id="EHS-Sl-jey"/>
+                            <constraint firstItem="NTN-JZ-Hey" firstAttribute="top" secondItem="dVg-lK-931" secondAttribute="top" id="RcQ-0F-53e"/>
+                            <constraint firstAttribute="bottom" secondItem="wxV-hx-BGF" secondAttribute="bottom" id="SOu-OH-2P0"/>
+                            <constraint firstItem="wxV-hx-BGF" firstAttribute="leading" secondItem="dVg-lK-931" secondAttribute="leading" id="gjW-ak-dgd"/>
+                            <constraint firstItem="wxV-hx-BGF" firstAttribute="top" secondItem="dVg-lK-931" secondAttribute="top" id="mbm-JM-BGt"/>
+                            <constraint firstAttribute="trailing" secondItem="wxV-hx-BGF" secondAttribute="trailing" id="o1n-ZO-VgU"/>
+                            <constraint firstItem="NTN-JZ-Hey" firstAttribute="leading" secondItem="dVg-lK-931" secondAttribute="leading" id="ow9-fu-C1F"/>
+                            <constraint firstAttribute="width" constant="100" id="p5Y-SH-B6s"/>
                         </constraints>
-                    </imageView>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Err-D3-OlY">
                         <rect key="frame" x="189" y="65" width="111" height="40"/>
                         <subviews>
@@ -68,10 +91,10 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Err-D3-OlY" secondAttribute="trailing" constant="20" id="0DY-7D-lMQ"/>
+                    <constraint firstItem="dVg-lK-931" firstAttribute="top" secondItem="KKl-2h-bsa" secondAttribute="bottom" constant="5" id="Co5-JB-5Nt"/>
                     <constraint firstItem="Err-D3-OlY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FmA-kd-bbE"/>
-                    <constraint firstItem="wxV-hx-BGF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Niq-yK-cQl"/>
-                    <constraint firstItem="wxV-hx-BGF" firstAttribute="top" secondItem="KKl-2h-bsa" secondAttribute="bottom" constant="5" id="al0-b1-dOI"/>
-                    <constraint firstAttribute="bottom" secondItem="wxV-hx-BGF" secondAttribute="bottom" constant="10" id="cet-5V-i6h"/>
+                    <constraint firstAttribute="bottom" secondItem="dVg-lK-931" secondAttribute="bottom" constant="10" id="ITj-S6-qqQ"/>
+                    <constraint firstItem="dVg-lK-931" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="e0d-HS-AJY"/>
                     <constraint firstItem="KKl-2h-bsa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="fX6-ui-kyW"/>
                     <constraint firstAttribute="trailing" secondItem="KKl-2h-bsa" secondAttribute="trailing" constant="20" id="lSw-If-yBg"/>
                     <constraint firstItem="KKl-2h-bsa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="zIH-FU-zPr"/>
@@ -87,5 +110,8 @@
     </objects>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

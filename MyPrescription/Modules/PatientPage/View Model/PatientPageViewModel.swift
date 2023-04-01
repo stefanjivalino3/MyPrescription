@@ -77,11 +77,19 @@ class PatientPageViewModel {
     
     func getPatientList() {
         do {
-            patientData = try context.fetch(PatientItem.fetchRequest())
+            let data = try context.fetch(PatientItem.fetchRequest())
+            patientData = data.reversed()
             didGetData?()
             
         }
         catch {}
+    }
+    
+    func deletePatient(patient: PatientItem) {
+        context.delete(patient)
+        do {
+            try context.save()
+        } catch {}
     }
 
     
