@@ -15,8 +15,10 @@ class AddPatientView: UIViewController {
     // VARIABLES HERE
     var viewModel = AddPatientViewModel()
     var patientData =   PatientDataModel()
+    var patientSavedData = PatientItem()
     var photoImage: UIImage = UIImage(systemName: "camera") ?? UIImage()
     var isButtonEnabled = false
+    var isDetailPage = false
     
     
 
@@ -29,7 +31,12 @@ class AddPatientView: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationItem.title = "Add Patient"
+        if isDetailPage == false {
+            navigationItem.title = "Add Patient"
+        } else {
+            navigationItem.title = "Patient Detail"
+        }
+        
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
@@ -84,14 +91,18 @@ class AddPatientView: UIViewController {
         }
         
         let index = IndexPath(row: 6, section: 0)
-        tableView.reloadRows(at: [index], with: .automatic)
+        tableView.reloadRows(at: [index], with: .none)
     }
     
 }
 
 extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        if isDetailPage == true {
+            return 6
+        } else {
+            return 7
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -107,6 +118,11 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
                 self?.checkDataFilled()
             }
             
+            if isDetailPage == true {
+                cell.inputTextField.isUserInteractionEnabled = false
+                cell.inputTextField.text = patientSavedData.fullName
+            }
+            
             return cell
         case 1:
             let cell = tableView.dequeueCell(with: DatePickerCell.self)!
@@ -118,6 +134,11 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
             cell.datePicker.minimumDate = Calendar.current.date(byAdding: .year, value: -90, to: Date())
             cell.datePicker.maximumDate = Date()
             
+            if isDetailPage == true {
+                cell.datePicker.isUserInteractionEnabled = false
+                cell.datePicker.date = patientSavedData.birthDate ?? Date()
+            }
+            
             return cell
         case 2:
             let cell = tableView.dequeueCell(with: DatePickerCell.self)!
@@ -127,6 +148,11 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
             cell.datePicker.minimumDate = Date()
             cell.datePicker.maximumDate = Date()
             cell.datePicker.isUserInteractionEnabled = false
+            
+            if isDetailPage == true {
+                cell.datePicker.isUserInteractionEnabled = false
+                cell.datePicker.date = patientSavedData.visitDate ?? Date()
+            }
             
             return cell
         case 3:
@@ -138,6 +164,12 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
             cell.didCheckEditing = { [weak self] in
                 self?.checkDataFilled()
             }
+            
+            if isDetailPage == true {
+                cell.textView.isUserInteractionEnabled = false
+                cell.textView.text = patientSavedData.desc
+            }
+            
             return cell
         case 4:
             let cell = tableView.dequeueCell(with: TextViewCell.self)!
@@ -148,6 +180,12 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
             cell.didCheckEditing = { [weak self] in
                 self?.checkDataFilled()
             }
+            
+            if isDetailPage == true {
+                cell.textView.isUserInteractionEnabled = false
+                cell.textView.text = patientSavedData.prescription
+            }
+            
             return cell
         case 5:
             let cell = tableView.dequeueCell(with: PhotoCell.self)!
@@ -155,6 +193,12 @@ extension AddPatientView: UITableViewDelegate,UITableViewDataSource {
             cell.delegate = self
             cell.indexPath = indexPath
             cell.photoImageView.image = photoImage
+            
+            if isDetailPage == true {
+                cell.photoImageView.image = UIImage(data: patientSavedData.medicinePhoto ?? Data())
+                cell.buttonView.isHidden = true
+            }
+            
             return cell
         default:
             let cell = tableView.dequeueCell(with: ButtonCell.self)!
@@ -235,9 +279,8 @@ extension AddPatientView: UIImagePickerControllerDelegate, UINavigationControlle
         photoImage = image
         patientData.medicinePhoto = image.jpegData(compressionQuality: 1) ?? Data()
         
-        let index = IndexPath(row: 6, section: 0)
-        let index2 = IndexPath(row: 5, section: 0)
-        tableView.reloadRows(at: [index,index2], with: .automatic)
+        let index = IndexPath(row: 5, section: 0)
+        tableView.reloadRows(at: [index], with: .none)
     }
 }
 

@@ -90,9 +90,10 @@ extension PatientPageView: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.dequeueCell(with: TextFieldCell.self)!
-//
-//         print(cell.inputTextField.text)
+        let vc = AddPatientView()
+        vc.isDetailPage = true
+        vc.patientSavedData = viewModel.patientData[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
