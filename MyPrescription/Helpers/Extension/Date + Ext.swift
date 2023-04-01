@@ -24,4 +24,28 @@ extension Date {
 
         return sourceDate!;
     }
+    
+    public var dateToFullDayString: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, d MMMM yyyy"
+        
+        // Force specific and consistent DateFormatter settings
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.timeZone = TimeZone(abbreviation: "WIT")
+        formatter.locale = Locale(identifier: "id_ID")
+        
+        return formatter.string(from: self)
+    }
+    
+    public var dateOnlyString: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM yyyy"
+        
+        // Force specific and consistent DateFormatter settings
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.timeZone = TimeZone(abbreviation: "WIT")
+        formatter.locale = Locale(identifier: "id_ID")
+        
+        return formatter.string(from: self)
+    }
 }

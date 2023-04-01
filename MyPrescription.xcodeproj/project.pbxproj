@@ -34,6 +34,8 @@
 		0BD2713F29D7AA6B00161D7E /* Date + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2713E29D7AA6B00161D7E /* Date + Ext.swift */; };
 		0BD2714329D7AE3600161D7E /* PatientItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2714129D7AE3600161D7E /* PatientItem+CoreDataClass.swift */; };
 		0BD2714429D7AE3600161D7E /* PatientItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2714229D7AE3600161D7E /* PatientItem+CoreDataProperties.swift */; };
+		0BD2714829D7C0D500161D7E /* PatientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2714629D7C0D500161D7E /* PatientCell.swift */; };
+		0BD2714929D7C0D500161D7E /* PatientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD2714729D7C0D500161D7E /* PatientCell.xib */; };
 		0BFAEE3929D74EAC00457070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3829D74EAC00457070 /* AppDelegate.swift */; };
 		0BFAEE3B29D74EAC00457070 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3A29D74EAC00457070 /* SceneDelegate.swift */; };
 		0BFAEE3D29D74EAC00457070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3C29D74EAC00457070 /* ViewController.swift */; };
@@ -56,6 +58,7 @@
 		0BFAEE8629D74F3200457070 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE7129D74F3200457070 /* BaseNavigationController.swift */; };
 		0BFAEE8729D74F3200457070 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE7229D74F3200457070 /* Reach.swift */; };
 		0BFAEE8829D74F3200457070 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE7329D74F3200457070 /* TabBarController.swift */; };
+		5B8EE1702E01E34CFF9957F5 /* Pods_MyPrescription.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F72025A29A5FCEE218A2B8 /* Pods_MyPrescription.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,8 @@
 		0BD2713E29D7AA6B00161D7E /* Date + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext.swift"; sourceTree = "<group>"; };
 		0BD2714129D7AE3600161D7E /* PatientItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PatientItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		0BD2714229D7AE3600161D7E /* PatientItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PatientItem+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		0BD2714629D7C0D500161D7E /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCell.swift; sourceTree = "<group>"; };
+		0BD2714729D7C0D500161D7E /* PatientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientCell.xib; sourceTree = "<group>"; };
 		0BFAEE3529D74EAC00457070 /* MyPrescription.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPrescription.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFAEE3829D74EAC00457070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BFAEE3A29D74EAC00457070 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +116,9 @@
 		0BFAEE7229D74F3200457070 /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		0BFAEE7329D74F3200457070 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0BFAEE8929D74F6600457070 /* MyPrescription.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyPrescription.entitlements; sourceTree = "<group>"; };
+		57F72025A29A5FCEE218A2B8 /* Pods_MyPrescription.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPrescription.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86C520AFAC094E2A7E9B5DEA /* Pods-MyPrescription.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPrescription.release.xcconfig"; path = "Target Support Files/Pods-MyPrescription/Pods-MyPrescription.release.xcconfig"; sourceTree = "<group>"; };
+		9E27FDA45AE7E023F070F8DD /* Pods-MyPrescription.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPrescription.debug.xcconfig"; path = "Target Support Files/Pods-MyPrescription/Pods-MyPrescription.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8EE1702E01E34CFF9957F5 /* Pods_MyPrescription.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +136,7 @@
 		0BCF36B929D74FEE0009C237 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0BD2714529D7C0C300161D7E /* PatientCell */,
 				0BD2713929D79EA900161D7E /* ButtonCell */,
 				0BCF36F729D777320009C237 /* PhotoCell */,
 				0BCF36F229D770670009C237 /* TextViewCell */,
@@ -314,12 +324,22 @@
 			path = PatientItem;
 			sourceTree = "<group>";
 		};
+		0BD2714529D7C0C300161D7E /* PatientCell */ = {
+			isa = PBXGroup;
+			children = (
+				0BD2714629D7C0D500161D7E /* PatientCell.swift */,
+				0BD2714729D7C0D500161D7E /* PatientCell.xib */,
+			);
+			path = PatientCell;
+			sourceTree = "<group>";
+		};
 		0BFAEE2C29D74EAC00457070 = {
 			isa = PBXGroup;
 			children = (
 				0BFAEE3729D74EAC00457070 /* MyPrescription */,
 				0BFAEE3629D74EAC00457070 /* Products */,
 				3480C2A47F8B9F901AFAB35C /* Pods */,
+				10860971055359F37939F013 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -447,9 +467,19 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		10860971055359F37939F013 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57F72025A29A5FCEE218A2B8 /* Pods_MyPrescription.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3480C2A47F8B9F901AFAB35C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				9E27FDA45AE7E023F070F8DD /* Pods-MyPrescription.debug.xcconfig */,
+				86C520AFAC094E2A7E9B5DEA /* Pods-MyPrescription.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -461,9 +491,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BFAEE4C29D74EAE00457070 /* Build configuration list for PBXNativeTarget "MyPrescription" */;
 			buildPhases = (
+				09A4AE9180BC69DD7FDD64C7 /* [CP] Check Pods Manifest.lock */,
 				0BFAEE3129D74EAC00457070 /* Sources */,
 				0BFAEE3229D74EAC00457070 /* Frameworks */,
 				0BFAEE3329D74EAC00457070 /* Resources */,
+				9B044FF6958D96AA09EF5048 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -513,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BFAEE4829D74EAE00457070 /* LaunchScreen.storyboard in Resources */,
+				0BD2714929D7C0D500161D7E /* PatientCell.xib in Resources */,
 				0BFAEE4529D74EAE00457070 /* Assets.xcassets in Resources */,
 				0BFAEE4029D74EAC00457070 /* Main.storyboard in Resources */,
 				0BCF36E929D762A60009C237 /* AddPatientView.xib in Resources */,
@@ -527,6 +560,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09A4AE9180BC69DD7FDD64C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyPrescription-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B044FF6958D96AA09EF5048 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyPrescription/Pods-MyPrescription-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyPrescription/Pods-MyPrescription-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPrescription/Pods-MyPrescription-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0BFAEE3129D74EAC00457070 /* Sources */ = {
@@ -550,6 +625,7 @@
 				0BCF36F029D76D810009C237 /* DatePickerCell.swift in Sources */,
 				0BD2713C29D79EBF00161D7E /* ButtonCell.swift in Sources */,
 				0BFAEE8729D74F3200457070 /* Reach.swift in Sources */,
+				0BD2714829D7C0D500161D7E /* PatientCell.swift in Sources */,
 				0BCF36E829D762A60009C237 /* AddPatientModel.swift in Sources */,
 				0BFAEE3B29D74EAC00457070 /* SceneDelegate.swift in Sources */,
 				0BFAEE8029D74F3200457070 /* Global.swift in Sources */,
@@ -712,6 +788,7 @@
 		};
 		0BFAEE4D29D74EAE00457070 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E27FDA45AE7E023F070F8DD /* Pods-MyPrescription.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -741,6 +818,7 @@
 		};
 		0BFAEE4E29D74EAE00457070 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86C520AFAC094E2A7E9B5DEA /* Pods-MyPrescription.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

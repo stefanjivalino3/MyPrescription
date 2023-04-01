@@ -19,20 +19,21 @@ class PatientPageView: UIViewController {
         super.viewDidLoad()
         self.setupViewModel()
         self.viewModel.getPatientList()
-//        self.setupTableView()
+        self.setupTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        print("test")
+        self.viewModel.getPatientList()
+        self.tableView.reloadData()
     }
     
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.registerNIB(with: TextFieldCell.self)
+        tableView.registerNIB(with: PatientCell.self)
     }
     
     fileprivate func setupViewModel() {
@@ -61,7 +62,7 @@ class PatientPageView: UIViewController {
         }
 
         self.viewModel.didGetData = { [weak self] in
-            print(self?.viewModel.patientData.first?.fullName ?? "")
+            self?.tableView.reloadData()
         }
 
     }
@@ -75,36 +76,27 @@ class PatientPageView: UIViewController {
 
 extension PatientPageView: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return viewModel.patientData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
-            let cell = tableView.dequeueCell(with: TextFieldCell.self)!
-            cell.selectionStyle = .none
-            cell.configure(title: "Full Name")
-            
-            return cell
-        default:
-            let cell = tableView.dequeueCell(with: TextFieldCell.self)!
-            cell.selectionStyle = .none
-            cell.configure(title: "Full Name")
-            
-            return cell
-        }
+        let cell = tableView.dequeueCell(with: PatientCell.self)!
+        cell.selectionStyle = .none
+        cell.configure(name: viewModel.patientData[indexPath.row].fullName ?? "",
+                       birthdate: viewModel.patientData[indexPath.row].birthDate ?? Date(),
+                       visitdate: viewModel.patientData[indexPath.row].visitDate ?? Date())
         
-        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueCell(with: TextFieldCell.self)!
-        
-         print(cell.inputTextField.text)
+//        let cell = tableView.dequeueCell(with: TextFieldCell.self)!
+//
+//         print(cell.inputTextField.text)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 120
     }
 }
 
