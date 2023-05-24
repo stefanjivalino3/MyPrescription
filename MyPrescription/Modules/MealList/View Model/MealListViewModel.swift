@@ -75,14 +75,14 @@ class MealListViewModel {
     }
 
     //MARK: -- Example Func
-    func getMealList() {
+    func getMealList(search: String) {
         switch networkStatus {
         case .offline:
             self.isDisconnected = true
             self.internetConnectionStatus?()
         case .online:
             // call your service here
-            self.service.getMealList() { [weak self] result in
+            self.service.getMealList(search: search) { [weak self] result in
                 self?.mealData = result
                 self?.didGetData?()
             } onFailure: { [weak self] error in

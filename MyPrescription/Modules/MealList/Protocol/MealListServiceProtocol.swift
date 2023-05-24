@@ -16,6 +16,6 @@ protocol MealListServiceProtocol {
     ///                 example: success(_ data: YourModelName) -> ()
     ///   - failure: -- failure closure response, add your Model on this closure.  
     ///                 example: success(_ data: APIError) -> ()
-    func getMealList(onSuccess: @escaping(MealListModel) -> Void, onFailure: @escaping((Error)) -> ())
+    func getMealList(search: String, onSuccess: @escaping(MealListModel) -> Void, onFailure: @escaping((Error)) -> ())
 
 }

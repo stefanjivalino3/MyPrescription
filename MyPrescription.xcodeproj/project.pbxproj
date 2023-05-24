@@ -13,6 +13,8 @@
 		0B4AA9792A1E5FCB003C82FF /* MealListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AA9712A1E5FCB003C82FF /* MealListView.xib */; };
 		0B4AA97A2A1E5FCB003C82FF /* MealListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA9732A1E5FCB003C82FF /* MealListService.swift */; };
 		0B4AA97B2A1E5FCB003C82FF /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA9752A1E5FCB003C82FF /* MealListViewModel.swift */; };
+		0B4AA97F2A1E81EA003C82FF /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA97D2A1E81EA003C82FF /* MealCell.swift */; };
+		0B4AA9802A1E81EA003C82FF /* MealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AA97E2A1E81EA003C82FF /* MealCell.xib */; };
 		0BCF36BD29D7500D0009C237 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF36BB29D7500D0009C237 /* TextFieldCell.swift */; };
 		0BCF36BE29D7500D0009C237 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF36BC29D7500D0009C237 /* TextFieldCell.xib */; };
 		0BCF36C329D758450009C237 /* SignInItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF36C129D758450009C237 /* SignInItem+CoreDataClass.swift */; };
@@ -76,6 +78,8 @@
 		0B4AA9712A1E5FCB003C82FF /* MealListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MealListView.xib; sourceTree = "<group>"; };
 		0B4AA9732A1E5FCB003C82FF /* MealListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListService.swift; sourceTree = "<group>"; };
 		0B4AA9752A1E5FCB003C82FF /* MealListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
+		0B4AA97D2A1E81EA003C82FF /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
+		0B4AA97E2A1E81EA003C82FF /* MealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCell.xib; sourceTree = "<group>"; };
 		0BCF36BB29D7500D0009C237 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		0BCF36BC29D7500D0009C237 /* TextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
 		0BCF36C129D758450009C237 /* SignInItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -202,9 +206,19 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		0B4AA97C2A1E81D4003C82FF /* MealCell */ = {
+			isa = PBXGroup;
+			children = (
+				0B4AA97D2A1E81EA003C82FF /* MealCell.swift */,
+				0B4AA97E2A1E81EA003C82FF /* MealCell.xib */,
+			);
+			path = MealCell;
+			sourceTree = "<group>";
+		};
 		0BCF36B929D74FEE0009C237 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0B4AA97C2A1E81D4003C82FF /* MealCell */,
 				0BD2713929D79EA900161D7E /* ButtonCell */,
 				0BCF36ED29D76D530009C237 /* DatePickerCell */,
 				0BD2714A29D81B4500161D7E /* OpenPhotoView */,
@@ -636,6 +650,7 @@
 				0B4AA9792A1E5FCB003C82FF /* MealListView.xib in Resources */,
 				0BCF36BE29D7500D0009C237 /* TextFieldCell.xib in Resources */,
 				0BCF36F129D76D810009C237 /* DatePickerCell.xib in Resources */,
+				0B4AA9802A1E81EA003C82FF /* MealCell.xib in Resources */,
 				0BCF36F629D7707D0009C237 /* TextViewCell.xib in Resources */,
 				0BD2715229D81BB100161D7E /* OpenPhotoView.xib in Resources */,
 			);
@@ -730,6 +745,7 @@
 				0BFAEE8329D74F3200457070 /* UIViewController + Ext.swift in Sources */,
 				0BFAEE8429D74F3200457070 /* UIImageView + Ext.swift in Sources */,
 				0BCF36EB29D762A60009C237 /* AddPatientService.swift in Sources */,
+				0B4AA97F2A1E81EA003C82FF /* MealCell.swift in Sources */,
 				0BCF36D629D75A900009C237 /* PatientPageView.swift in Sources */,
 				0BCF36D829D75A900009C237 /* PatientPageViewModel.swift in Sources */,
 				0BCF36D729D75A900009C237 /* PatientPageService.swift in Sources */,
@@ -893,6 +909,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -925,6 +942,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

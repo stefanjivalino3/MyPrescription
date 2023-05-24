@@ -11,9 +11,9 @@ import Alamofire
 class MealListService: MealListServiceProtocol {
     // Call protocol function
 
-    func getMealList(onSuccess: @escaping(MealListModel) -> Void, onFailure: @escaping((Error)) -> ()) {
+    func getMealList(search: String, onSuccess: @escaping(MealListModel) -> Void, onFailure: @escaping((Error)) -> ()) {
 
-        let url = "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
+        let url = "https://www.themealdb.com/api/json/v1/1/search.php?f=\(search)"
         
         AF.request(
             url,
@@ -25,8 +25,11 @@ class MealListService: MealListServiceProtocol {
         ).response { response in
             switch response.result {
             case .success(let data):
+                guard let data = data else {
+                    return
+                }
                 do {
-                    let result = try JSONDecoder().decode(MealListModel.self, from: data!)
+                    let result = try JSONDecoder().decode(MealListModel.self, from: data)
                     onSuccess(result)
                 } catch {
                     onFailure(error)
