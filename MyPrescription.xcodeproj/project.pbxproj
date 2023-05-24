@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B4AA9762A1E5FCB003C82FF /* MealListServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA96C2A1E5FCB003C82FF /* MealListServiceProtocol.swift */; };
+		0B4AA9772A1E5FCB003C82FF /* MealListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA96E2A1E5FCB003C82FF /* MealListModel.swift */; };
+		0B4AA9782A1E5FCB003C82FF /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA9702A1E5FCB003C82FF /* MealListView.swift */; };
+		0B4AA9792A1E5FCB003C82FF /* MealListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AA9712A1E5FCB003C82FF /* MealListView.xib */; };
+		0B4AA97A2A1E5FCB003C82FF /* MealListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA9732A1E5FCB003C82FF /* MealListService.swift */; };
+		0B4AA97B2A1E5FCB003C82FF /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA9752A1E5FCB003C82FF /* MealListViewModel.swift */; };
 		0BCF36BD29D7500D0009C237 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF36BB29D7500D0009C237 /* TextFieldCell.swift */; };
 		0BCF36BE29D7500D0009C237 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF36BC29D7500D0009C237 /* TextFieldCell.xib */; };
 		0BCF36C329D758450009C237 /* SignInItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF36C129D758450009C237 /* SignInItem+CoreDataClass.swift */; };
@@ -64,6 +70,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B4AA96C2A1E5FCB003C82FF /* MealListServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListServiceProtocol.swift; sourceTree = "<group>"; };
+		0B4AA96E2A1E5FCB003C82FF /* MealListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListModel.swift; sourceTree = "<group>"; };
+		0B4AA9702A1E5FCB003C82FF /* MealListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListView.swift; sourceTree = "<group>"; };
+		0B4AA9712A1E5FCB003C82FF /* MealListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MealListView.xib; sourceTree = "<group>"; };
+		0B4AA9732A1E5FCB003C82FF /* MealListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListService.swift; sourceTree = "<group>"; };
+		0B4AA9752A1E5FCB003C82FF /* MealListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
 		0BCF36BB29D7500D0009C237 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		0BCF36BC29D7500D0009C237 /* TextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
 		0BCF36C129D758450009C237 /* SignInItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -137,6 +149,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B4AA96A2A1E5FCB003C82FF /* MealList */ = {
+			isa = PBXGroup;
+			children = (
+				0B4AA96B2A1E5FCB003C82FF /* Protocol */,
+				0B4AA96D2A1E5FCB003C82FF /* Model */,
+				0B4AA96F2A1E5FCB003C82FF /* View */,
+				0B4AA9722A1E5FCB003C82FF /* Service */,
+				0B4AA9742A1E5FCB003C82FF /* View Model */,
+			);
+			path = MealList;
+			sourceTree = "<group>";
+		};
+		0B4AA96B2A1E5FCB003C82FF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				0B4AA96C2A1E5FCB003C82FF /* MealListServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		0B4AA96D2A1E5FCB003C82FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B4AA96E2A1E5FCB003C82FF /* MealListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B4AA96F2A1E5FCB003C82FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B4AA9702A1E5FCB003C82FF /* MealListView.swift */,
+				0B4AA9712A1E5FCB003C82FF /* MealListView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0B4AA9722A1E5FCB003C82FF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0B4AA9732A1E5FCB003C82FF /* MealListService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0B4AA9742A1E5FCB003C82FF /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B4AA9752A1E5FCB003C82FF /* MealListViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		0BCF36B929D74FEE0009C237 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +454,7 @@
 		0BFAEE4F29D74F3200457070 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0B4AA96A2A1E5FCB003C82FF /* MealList */,
 				0BCF36DB29D762A60009C237 /* AddPatient */,
 				0BCF36C729D75A900009C237 /* PatientPage */,
 				0BFAEE5C29D74F3200457070 /* SignIn */,
@@ -567,6 +633,7 @@
 				0BD2713D29D79EBF00161D7E /* ButtonCell.xib in Resources */,
 				0BCF36D529D75A900009C237 /* PatientPageView.xib in Resources */,
 				0BFAEE7C29D74F3200457070 /* SignInView.xib in Resources */,
+				0B4AA9792A1E5FCB003C82FF /* MealListView.xib in Resources */,
 				0BCF36BE29D7500D0009C237 /* TextFieldCell.xib in Resources */,
 				0BCF36F129D76D810009C237 /* DatePickerCell.xib in Resources */,
 				0BCF36F629D7707D0009C237 /* TextViewCell.xib in Resources */,
@@ -634,6 +701,7 @@
 				0BCF36E729D762A60009C237 /* AddPatientServiceProtocol.swift in Sources */,
 				0BD2714329D7AE3600161D7E /* PatientItem+CoreDataClass.swift in Sources */,
 				0BFAEE7D29D74F3200457070 /* SignInView.swift in Sources */,
+				0B4AA9782A1E5FCB003C82FF /* MealListView.swift in Sources */,
 				0BCF36EC29D762A60009C237 /* AddPatientViewModel.swift in Sources */,
 				0BD2714429D7AE3600161D7E /* PatientItem+CoreDataProperties.swift in Sources */,
 				0BD2715129D81BB100161D7E /* OpenPhotoView.swift in Sources */,
@@ -641,9 +709,11 @@
 				0BCF36F029D76D810009C237 /* DatePickerCell.swift in Sources */,
 				0BD2713C29D79EBF00161D7E /* ButtonCell.swift in Sources */,
 				0BFAEE8729D74F3200457070 /* Reach.swift in Sources */,
+				0B4AA9762A1E5FCB003C82FF /* MealListServiceProtocol.swift in Sources */,
 				0BD2714829D7C0D500161D7E /* PatientCell.swift in Sources */,
 				0BCF36E829D762A60009C237 /* AddPatientModel.swift in Sources */,
 				0BFAEE3B29D74EAC00457070 /* SceneDelegate.swift in Sources */,
+				0B4AA9772A1E5FCB003C82FF /* MealListModel.swift in Sources */,
 				0BFAEE8029D74F3200457070 /* Global.swift in Sources */,
 				0BFAEE8229D74F3200457070 /* UITableView + Ext.swift in Sources */,
 				0BCF36D429D75A900009C237 /* PatientPageModel.swift in Sources */,
@@ -656,6 +726,7 @@
 				0BCF36C429D758450009C237 /* SignInItem+CoreDataProperties.swift in Sources */,
 				0BFAEE4329D74EAC00457070 /* MyPrescription.xcdatamodeld in Sources */,
 				0BCF36EA29D762A60009C237 /* AddPatientView.swift in Sources */,
+				0B4AA97A2A1E5FCB003C82FF /* MealListService.swift in Sources */,
 				0BFAEE8329D74F3200457070 /* UIViewController + Ext.swift in Sources */,
 				0BFAEE8429D74F3200457070 /* UIImageView + Ext.swift in Sources */,
 				0BCF36EB29D762A60009C237 /* AddPatientService.swift in Sources */,
@@ -663,6 +734,7 @@
 				0BCF36D829D75A900009C237 /* PatientPageViewModel.swift in Sources */,
 				0BCF36D729D75A900009C237 /* PatientPageService.swift in Sources */,
 				0BCF36BD29D7500D0009C237 /* TextFieldCell.swift in Sources */,
+				0B4AA97B2A1E5FCB003C82FF /* MealListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,31 +20,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
+//
+//            do {
+//                let userData = try context.fetch(SignInItem.fetchRequest())
+//                if userData.count > 0 {
+//                    isLoggedIn = true
+//                } else {
+//                    isLoggedIn = false
+//                }
+//
+//            }
+//            catch {
+//                isLoggedIn = false
+//            }
+//
+//            if isLoggedIn == false {
+//                let nvc = BaseNavigationController(rootViewController: SignInView())
+//                nvc.setNavigationBarHidden(true, animated: false)
+//                window.rootViewController = nvc
+//            }
+//            else {
+//                let nvc = BaseNavigationController(rootViewController: PatientPageView())
+//                nvc.setNavigationBarHidden(true, animated: false)
+//                window.rootViewController = nvc
+//            }
             
-            do {
-                let userData = try context.fetch(SignInItem.fetchRequest())
-                if userData.count > 0 {
-                    isLoggedIn = true
-                } else {
-                    isLoggedIn = false
-                }
-                
-            }
-            catch {
-                isLoggedIn = false
-            }
-            
-            if isLoggedIn == false {
-                let nvc = BaseNavigationController(rootViewController: SignInView())
-                nvc.setNavigationBarHidden(true, animated: false)
-                window.rootViewController = nvc
-            }
-            else {
-                let nvc = BaseNavigationController(rootViewController: PatientPageView())
-                nvc.setNavigationBarHidden(true, animated: false)
-                window.rootViewController = nvc
-            }
-            
+            let nvc = BaseNavigationController(rootViewController: MealListView())
+            nvc.setNavigationBarHidden(true, animated: false)
+            window.rootViewController = nvc
             self.window = window
             window.makeKeyAndVisible()
         }
