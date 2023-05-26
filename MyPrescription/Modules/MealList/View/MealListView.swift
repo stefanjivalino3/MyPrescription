@@ -83,8 +83,8 @@ extension MealListView: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         
         cell.configure(mealTitle: viewModel.mealData.meals?[indexPath.row].strMeal ?? "",
-                       mealDesc: viewModel.mealData.meals?[indexPath.row].strCategory ?? "")
-        
+                       mealDesc: viewModel.mealData.meals?[indexPath.row].strCategory ?? "",
+                       mealImage: viewModel.mealData.meals?[indexPath.row].strMealThumb ?? "")
         return cell
     }
     
@@ -107,7 +107,13 @@ extension MealListView: UITextFieldDelegate {
     }
     
     @IBAction func textFieldDidChange(_ sender: Any) {
-        self.viewModel.getMealList(search: searchTextField.text ?? "")
+        if searchTextField.text ?? "" == "" {
+            self.viewModel.mealData = MealListModel()
+            self.tableView.reloadData()
+        } else {
+            self.viewModel.getMealList(search: searchTextField.text ?? "")
+        }
+        
     }
 }
 

@@ -8,5 +8,6 @@ target 'MyPrescription' do
   # Pods for MyPrescription
   pod 'SnapKit'
   pod 'Alamofire'
+  pod 'Kingfisher'
 
 end

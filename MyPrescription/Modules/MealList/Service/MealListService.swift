@@ -43,3 +43,20 @@ class MealListService: MealListServiceProtocol {
     }
 
 }
+
+class MealListMockService: MealListServiceProtocol {
+    func getMealList(search: String, onSuccess: @escaping (MealListModel) -> Void, onFailure: @escaping ((Error)) -> ()) {
+        let response = MealListModel(meals: [
+            Meals(idMeal: "1", strMeal: "Apple", strCategory: "Dessert", strMealThumb: "www.test.com"),
+            Meals(idMeal: "3", strMeal: "Air", strCategory: "Dessert", strMealThumb: "www.test.com"),
+            Meals(idMeal: "4", strMeal: "Arem", strCategory: "Dessert", strMealThumb: "www.test.com"),
+            Meals(idMeal: "6", strMeal: "Arak", strCategory: "Dessert", strMealThumb: "www.test.com")
+        ])
+        
+        onSuccess(response)
+    }
+    
+    
+}
+
+

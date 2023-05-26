@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MealListView" customModule="MyPrescription" customModuleProvider="target">
             <connections>
-                <outlet property="searchTextField" destination="7xC-4T-Oi6" id="UNB-oT-BJe"/>
+                <outlet property="searchTextField" destination="7xC-4T-Oi6" id="t1T-AU-UTb"/>
                 <outlet property="searchView" destination="8Wb-z2-8K2" id="TPs-33-Jes"/>
                 <outlet property="tableView" destination="Ybj-vv-gTh" id="jWl-2y-XmC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,20 +29,20 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search by first letter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hp6-H2-pNo">
-                    <rect key="frame" x="180" y="133" width="193" height="15.666666666666657"/>
+                    <rect key="frame" x="180" y="123.00000000000001" width="193" height="15.666666666666671"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ybj-vv-gTh">
-                    <rect key="frame" x="0.0" y="173" width="393" height="645"/>
+                    <rect key="frame" x="0.0" y="163" width="393" height="655"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wb-z2-8K2">
-                    <rect key="frame" x="20" y="123" width="150" height="35"/>
+                    <rect key="frame" x="20" y="113" width="150" height="35"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ueX-Mc-0xV">
-                            <rect key="frame" x="5" y="8.6666666666666536" width="20" height="18.333333333333336"/>
+                            <rect key="frame" x="5" y="8.6666666666666679" width="20" height="18.333333333333336"/>
                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="CED-pT-NQx"/>
@@ -77,8 +77,8 @@
                 <constraint firstItem="Ybj-vv-gTh" firstAttribute="top" secondItem="8Wb-z2-8K2" secondAttribute="bottom" constant="15" id="Svx-mJ-zPH"/>
                 <constraint firstItem="Ybj-vv-gTh" firstAttribute="bottom" secondItem="lD0-xl-MBU" secondAttribute="bottom" id="Te4-lr-yBh"/>
                 <constraint firstItem="Ybj-vv-gTh" firstAttribute="leading" secondItem="lD0-xl-MBU" secondAttribute="leading" id="Vnu-Ob-Wls"/>
-                <constraint firstItem="hp6-H2-pNo" firstAttribute="top" secondItem="5pv-RP-9Ow" secondAttribute="bottom" constant="30" id="Yzb-Lj-Ark"/>
-                <constraint firstItem="8Wb-z2-8K2" firstAttribute="top" secondItem="5pv-RP-9Ow" secondAttribute="bottom" constant="20" id="exL-WH-9bQ"/>
+                <constraint firstItem="hp6-H2-pNo" firstAttribute="top" secondItem="5pv-RP-9Ow" secondAttribute="bottom" constant="20" id="Yzb-Lj-Ark"/>
+                <constraint firstItem="8Wb-z2-8K2" firstAttribute="top" secondItem="5pv-RP-9Ow" secondAttribute="bottom" constant="10" id="exL-WH-9bQ"/>
                 <constraint firstItem="5pv-RP-9Ow" firstAttribute="top" secondItem="lD0-xl-MBU" secondAttribute="top" constant="10" id="gjf-ZT-Nfj"/>
                 <constraint firstItem="lD0-xl-MBU" firstAttribute="trailing" secondItem="hp6-H2-pNo" secondAttribute="trailing" constant="20" id="rFd-aK-hXv"/>
                 <constraint firstItem="lD0-xl-MBU" firstAttribute="trailing" secondItem="hp6-H2-pNo" secondAttribute="trailing" constant="20" id="tMK-eR-GHn"/>

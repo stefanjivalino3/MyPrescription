@@ -9,10 +9,12 @@ import UIKit
 
 class MealCell: UITableViewCell {
 
+    @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var mealImageView: UIImageView!
     @IBOutlet weak var mealTitleLabel: UILabel!
     @IBOutlet weak var mealDescLabel: UILabel!
     @IBOutlet weak var mealImageHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,12 +22,16 @@ class MealCell: UITableViewCell {
     }
     
     func setupView() {
-        mealImageHeight.constant = UIScreen.main.bounds.size.width
+        viewButton.layer.cornerRadius = 8
+        bgView.layer.cornerRadius = 16
+        bgView.layer.borderWidth = 1
+        bgView.layer.borderColor = UIColor.black.cgColor
     }
     
-    func configure(mealTitle: String, mealDesc: String) {
+    func configure(mealTitle: String, mealDesc: String, mealImage: String) {
         mealTitleLabel.text = mealTitle
-        mealDescLabel.text = mealDesc
+        mealDescLabel.text = "Category: \(mealDesc)"
+        mealImageView.showImageFromUrl(url: mealImage)
     }
     
 }

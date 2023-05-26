@@ -15,6 +15,8 @@
 		0B4AA97B2A1E5FCB003C82FF /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA9752A1E5FCB003C82FF /* MealListViewModel.swift */; };
 		0B4AA97F2A1E81EA003C82FF /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA97D2A1E81EA003C82FF /* MealCell.swift */; };
 		0B4AA9802A1E81EA003C82FF /* MealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AA97E2A1E81EA003C82FF /* MealCell.xib */; };
+		0BCB14DE2A1FDCC5000E8D9A /* MyPrescriptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCB14DD2A1FDCC5000E8D9A /* MyPrescriptionTests.swift */; };
+		0BCB14E52A1FE0DA000E8D9A /* MealListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCB14E42A1FE0DA000E8D9A /* MealListTests.swift */; };
 		0BCF36BD29D7500D0009C237 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF36BB29D7500D0009C237 /* TextFieldCell.swift */; };
 		0BCF36BE29D7500D0009C237 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCF36BC29D7500D0009C237 /* TextFieldCell.xib */; };
 		0BCF36C329D758450009C237 /* SignInItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF36C129D758450009C237 /* SignInItem+CoreDataClass.swift */; };
@@ -71,6 +73,16 @@
 		5B8EE1702E01E34CFF9957F5 /* Pods_MyPrescription.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F72025A29A5FCEE218A2B8 /* Pods_MyPrescription.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0BCB14DF2A1FDCC5000E8D9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BFAEE2D29D74EAC00457070 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BFAEE3429D74EAC00457070;
+			remoteInfo = MyPrescription;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0B4AA96C2A1E5FCB003C82FF /* MealListServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListServiceProtocol.swift; sourceTree = "<group>"; };
 		0B4AA96E2A1E5FCB003C82FF /* MealListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListModel.swift; sourceTree = "<group>"; };
@@ -80,6 +92,9 @@
 		0B4AA9752A1E5FCB003C82FF /* MealListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
 		0B4AA97D2A1E81EA003C82FF /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
 		0B4AA97E2A1E81EA003C82FF /* MealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCell.xib; sourceTree = "<group>"; };
+		0BCB14DB2A1FDCC5000E8D9A /* MyPrescriptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPrescriptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BCB14DD2A1FDCC5000E8D9A /* MyPrescriptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPrescriptionTests.swift; sourceTree = "<group>"; };
+		0BCB14E42A1FE0DA000E8D9A /* MealListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTests.swift; sourceTree = "<group>"; };
 		0BCF36BB29D7500D0009C237 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		0BCF36BC29D7500D0009C237 /* TextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
 		0BCF36C129D758450009C237 /* SignInItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -142,6 +157,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0BCB14D82A1FDCC5000E8D9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0BFAEE3229D74EAC00457070 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +235,15 @@
 				0B4AA97E2A1E81EA003C82FF /* MealCell.xib */,
 			);
 			path = MealCell;
+			sourceTree = "<group>";
+		};
+		0BCB14DC2A1FDCC5000E8D9A /* MyPrescriptionTests */ = {
+			isa = PBXGroup;
+			children = (
+				0BCB14DD2A1FDCC5000E8D9A /* MyPrescriptionTests.swift */,
+				0BCB14E42A1FE0DA000E8D9A /* MealListTests.swift */,
+			);
+			path = MyPrescriptionTests;
 			sourceTree = "<group>";
 		};
 		0BCF36B929D74FEE0009C237 /* Components */ = {
@@ -430,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				0BFAEE3729D74EAC00457070 /* MyPrescription */,
+				0BCB14DC2A1FDCC5000E8D9A /* MyPrescriptionTests */,
 				0BFAEE3629D74EAC00457070 /* Products */,
 				3480C2A47F8B9F901AFAB35C /* Pods */,
 				10860971055359F37939F013 /* Frameworks */,
@@ -440,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				0BFAEE3529D74EAC00457070 /* MyPrescription.app */,
+				0BCB14DB2A1FDCC5000E8D9A /* MyPrescriptionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -581,6 +614,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0BCB14DA2A1FDCC5000E8D9A /* MyPrescriptionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BCB14E32A1FDCC5000E8D9A /* Build configuration list for PBXNativeTarget "MyPrescriptionTests" */;
+			buildPhases = (
+				0BCB14D72A1FDCC5000E8D9A /* Sources */,
+				0BCB14D82A1FDCC5000E8D9A /* Frameworks */,
+				0BCB14D92A1FDCC5000E8D9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BCB14E02A1FDCC5000E8D9A /* PBXTargetDependency */,
+			);
+			name = MyPrescriptionTests;
+			productName = MyPrescriptionTests;
+			productReference = 0BCB14DB2A1FDCC5000E8D9A /* MyPrescriptionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0BFAEE3429D74EAC00457070 /* MyPrescription */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BFAEE4C29D74EAE00457070 /* Build configuration list for PBXNativeTarget "MyPrescription" */;
@@ -610,6 +661,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					0BCB14DA2A1FDCC5000E8D9A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 0BFAEE3429D74EAC00457070;
+					};
 					0BFAEE3429D74EAC00457070 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -629,11 +684,19 @@
 			projectRoot = "";
 			targets = (
 				0BFAEE3429D74EAC00457070 /* MyPrescription */,
+				0BCB14DA2A1FDCC5000E8D9A /* MyPrescriptionTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0BCB14D92A1FDCC5000E8D9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0BFAEE3329D74EAC00457070 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -701,6 +764,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0BCB14D72A1FDCC5000E8D9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BCB14E52A1FE0DA000E8D9A /* MealListTests.swift in Sources */,
+				0BCB14DE2A1FDCC5000E8D9A /* MyPrescriptionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0BFAEE3129D74EAC00457070 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -756,6 +828,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0BCB14E02A1FDCC5000E8D9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BFAEE3429D74EAC00457070 /* MyPrescription */;
+			targetProxy = 0BCB14DF2A1FDCC5000E8D9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		0BFAEE3E29D74EAC00457070 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -776,6 +856,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0BCB14E12A1FDCC5000E8D9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M55YUT6SXH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stefanjivalino.MyPrescriptionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPrescription.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyPrescription";
+			};
+			name = Debug;
+		};
+		0BCB14E22A1FDCC5000E8D9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M55YUT6SXH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stefanjivalino.MyPrescriptionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPrescription.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyPrescription";
+			};
+			name = Release;
+		};
 		0BFAEE4A29D74EAE00457070 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -959,6 +1075,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0BCB14E32A1FDCC5000E8D9A /* Build configuration list for PBXNativeTarget "MyPrescriptionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BCB14E12A1FDCC5000E8D9A /* Debug */,
+				0BCB14E22A1FDCC5000E8D9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0BFAEE3029D74EAC00457070 /* Build configuration list for PBXProject "MyPrescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
