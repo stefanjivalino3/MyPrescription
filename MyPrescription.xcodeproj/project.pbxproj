@@ -15,6 +15,9 @@
 		0B4AA97B2A1E5FCB003C82FF /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA9752A1E5FCB003C82FF /* MealListViewModel.swift */; };
 		0B4AA97F2A1E81EA003C82FF /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AA97D2A1E81EA003C82FF /* MealCell.swift */; };
 		0B4AA9802A1E81EA003C82FF /* MealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AA97E2A1E81EA003C82FF /* MealCell.xib */; };
+		0B8F09202A22085E00E6471D /* ZoomableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F091F2A22085E00E6471D /* ZoomableView.swift */; };
+		0B8F09222A220C5000E6471D /* ZoomableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F09212A220C5000E6471D /* ZoomableTableView.swift */; };
+		0B8F09242A220E9600E6471D /* MealDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F09232A220E9600E6471D /* MealDetailTests.swift */; };
 		0BCB14DE2A1FDCC5000E8D9A /* MyPrescriptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCB14DD2A1FDCC5000E8D9A /* MyPrescriptionTests.swift */; };
 		0BCB14E52A1FE0DA000E8D9A /* MealListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCB14E42A1FE0DA000E8D9A /* MealListTests.swift */; };
 		0BCF36BD29D7500D0009C237 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF36BB29D7500D0009C237 /* TextFieldCell.swift */; };
@@ -48,6 +51,18 @@
 		0BD2714929D7C0D500161D7E /* PatientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD2714729D7C0D500161D7E /* PatientCell.xib */; };
 		0BD2715129D81BB100161D7E /* OpenPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2714F29D81BB100161D7E /* OpenPhotoView.swift */; };
 		0BD2715229D81BB100161D7E /* OpenPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD2715029D81BB100161D7E /* OpenPhotoView.xib */; };
+		0BF0F6F12A20E5E900D8D7D2 /* MealDetailServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0F6E72A20E5E900D8D7D2 /* MealDetailServiceProtocol.swift */; };
+		0BF0F6F22A20E5E900D8D7D2 /* MealDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0F6E92A20E5E900D8D7D2 /* MealDetailModel.swift */; };
+		0BF0F6F32A20E5E900D8D7D2 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0F6EB2A20E5E900D8D7D2 /* MealDetailView.swift */; };
+		0BF0F6F42A20E5E900D8D7D2 /* MealDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0F6EC2A20E5E900D8D7D2 /* MealDetailView.xib */; };
+		0BF0F6F52A20E5E900D8D7D2 /* MealDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0F6EE2A20E5E900D8D7D2 /* MealDetailService.swift */; };
+		0BF0F6F62A20E5E900D8D7D2 /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0F6F02A20E5E900D8D7D2 /* MealDetailViewModel.swift */; };
+		0BF0F6FA2A20E7C400D8D7D2 /* MealDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0F6F82A20E7C400D8D7D2 /* MealDetailCell.swift */; };
+		0BF0F6FB2A20E7C400D8D7D2 /* MealDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0F6F92A20E7C400D8D7D2 /* MealDetailCell.xib */; };
+		0BF0F7042A20EB8200D8D7D2 /* MealDetailGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0F7022A20EB8200D8D7D2 /* MealDetailGroupCell.swift */; };
+		0BF0F7052A20EB8200D8D7D2 /* MealDetailGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0F7032A20EB8200D8D7D2 /* MealDetailGroupCell.xib */; };
+		0BF0F7092A2111AB00D8D7D2 /* MealDetailInstructionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF0F7072A2111AB00D8D7D2 /* MealDetailInstructionCell.swift */; };
+		0BF0F70A2A2111AB00D8D7D2 /* MealDetailInstructionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF0F7082A2111AB00D8D7D2 /* MealDetailInstructionCell.xib */; };
 		0BFAEE3929D74EAC00457070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3829D74EAC00457070 /* AppDelegate.swift */; };
 		0BFAEE3B29D74EAC00457070 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3A29D74EAC00457070 /* SceneDelegate.swift */; };
 		0BFAEE3D29D74EAC00457070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFAEE3C29D74EAC00457070 /* ViewController.swift */; };
@@ -92,6 +107,9 @@
 		0B4AA9752A1E5FCB003C82FF /* MealListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
 		0B4AA97D2A1E81EA003C82FF /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
 		0B4AA97E2A1E81EA003C82FF /* MealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCell.xib; sourceTree = "<group>"; };
+		0B8F091F2A22085E00E6471D /* ZoomableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableView.swift; sourceTree = "<group>"; };
+		0B8F09212A220C5000E6471D /* ZoomableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableTableView.swift; sourceTree = "<group>"; };
+		0B8F09232A220E9600E6471D /* MealDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailTests.swift; sourceTree = "<group>"; };
 		0BCB14DB2A1FDCC5000E8D9A /* MyPrescriptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPrescriptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCB14DD2A1FDCC5000E8D9A /* MyPrescriptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPrescriptionTests.swift; sourceTree = "<group>"; };
 		0BCB14E42A1FE0DA000E8D9A /* MealListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTests.swift; sourceTree = "<group>"; };
@@ -126,6 +144,18 @@
 		0BD2714729D7C0D500161D7E /* PatientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatientCell.xib; sourceTree = "<group>"; };
 		0BD2714F29D81BB100161D7E /* OpenPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPhotoView.swift; sourceTree = "<group>"; };
 		0BD2715029D81BB100161D7E /* OpenPhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenPhotoView.xib; sourceTree = "<group>"; };
+		0BF0F6E72A20E5E900D8D7D2 /* MealDetailServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailServiceProtocol.swift; sourceTree = "<group>"; };
+		0BF0F6E92A20E5E900D8D7D2 /* MealDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailModel.swift; sourceTree = "<group>"; };
+		0BF0F6EB2A20E5E900D8D7D2 /* MealDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		0BF0F6EC2A20E5E900D8D7D2 /* MealDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MealDetailView.xib; sourceTree = "<group>"; };
+		0BF0F6EE2A20E5E900D8D7D2 /* MealDetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailService.swift; sourceTree = "<group>"; };
+		0BF0F6F02A20E5E900D8D7D2 /* MealDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
+		0BF0F6F82A20E7C400D8D7D2 /* MealDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailCell.swift; sourceTree = "<group>"; };
+		0BF0F6F92A20E7C400D8D7D2 /* MealDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealDetailCell.xib; sourceTree = "<group>"; };
+		0BF0F7022A20EB8200D8D7D2 /* MealDetailGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailGroupCell.swift; sourceTree = "<group>"; };
+		0BF0F7032A20EB8200D8D7D2 /* MealDetailGroupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealDetailGroupCell.xib; sourceTree = "<group>"; };
+		0BF0F7072A2111AB00D8D7D2 /* MealDetailInstructionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailInstructionCell.swift; sourceTree = "<group>"; };
+		0BF0F7082A2111AB00D8D7D2 /* MealDetailInstructionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealDetailInstructionCell.xib; sourceTree = "<group>"; };
 		0BFAEE3529D74EAC00457070 /* MyPrescription.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPrescription.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFAEE3829D74EAC00457070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BFAEE3A29D74EAC00457070 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -242,6 +272,7 @@
 			children = (
 				0BCB14DD2A1FDCC5000E8D9A /* MyPrescriptionTests.swift */,
 				0BCB14E42A1FE0DA000E8D9A /* MealListTests.swift */,
+				0B8F09232A220E9600E6471D /* MealDetailTests.swift */,
 			);
 			path = MyPrescriptionTests;
 			sourceTree = "<group>";
@@ -250,6 +281,9 @@
 			isa = PBXGroup;
 			children = (
 				0B4AA97C2A1E81D4003C82FF /* MealCell */,
+				0BF0F6F72A20E7AB00D8D7D2 /* MealDetailCell */,
+				0BF0F7012A20EB5700D8D7D2 /* MealDetailListCell */,
+				0BF0F7062A21119300D8D7D2 /* MealDetailInstructionCell */,
 				0BD2713929D79EA900161D7E /* ButtonCell */,
 				0BCF36ED29D76D530009C237 /* DatePickerCell */,
 				0BD2714A29D81B4500161D7E /* OpenPhotoView */,
@@ -457,6 +491,86 @@
 			path = OpenPhotoView;
 			sourceTree = "<group>";
 		};
+		0BF0F6E52A20E5E900D8D7D2 /* MealDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0BF0F6E62A20E5E900D8D7D2 /* Protocol */,
+				0BF0F6E82A20E5E900D8D7D2 /* Model */,
+				0BF0F6EA2A20E5E900D8D7D2 /* View */,
+				0BF0F6ED2A20E5E900D8D7D2 /* Service */,
+				0BF0F6EF2A20E5E900D8D7D2 /* View Model */,
+			);
+			path = MealDetail;
+			sourceTree = "<group>";
+		};
+		0BF0F6E62A20E5E900D8D7D2 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				0BF0F6E72A20E5E900D8D7D2 /* MealDetailServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		0BF0F6E82A20E5E900D8D7D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0BF0F6E92A20E5E900D8D7D2 /* MealDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0BF0F6EA2A20E5E900D8D7D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0BF0F6EB2A20E5E900D8D7D2 /* MealDetailView.swift */,
+				0BF0F6EC2A20E5E900D8D7D2 /* MealDetailView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0BF0F6ED2A20E5E900D8D7D2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0BF0F6EE2A20E5E900D8D7D2 /* MealDetailService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0BF0F6EF2A20E5E900D8D7D2 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				0BF0F6F02A20E5E900D8D7D2 /* MealDetailViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		0BF0F6F72A20E7AB00D8D7D2 /* MealDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				0BF0F6F82A20E7C400D8D7D2 /* MealDetailCell.swift */,
+				0BF0F6F92A20E7C400D8D7D2 /* MealDetailCell.xib */,
+			);
+			path = MealDetailCell;
+			sourceTree = "<group>";
+		};
+		0BF0F7012A20EB5700D8D7D2 /* MealDetailListCell */ = {
+			isa = PBXGroup;
+			children = (
+				0BF0F7022A20EB8200D8D7D2 /* MealDetailGroupCell.swift */,
+				0BF0F7032A20EB8200D8D7D2 /* MealDetailGroupCell.xib */,
+			);
+			path = MealDetailListCell;
+			sourceTree = "<group>";
+		};
+		0BF0F7062A21119300D8D7D2 /* MealDetailInstructionCell */ = {
+			isa = PBXGroup;
+			children = (
+				0BF0F7072A2111AB00D8D7D2 /* MealDetailInstructionCell.swift */,
+				0BF0F7082A2111AB00D8D7D2 /* MealDetailInstructionCell.xib */,
+			);
+			path = MealDetailInstructionCell;
+			sourceTree = "<group>";
+		};
 		0BFAEE2C29D74EAC00457070 = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +616,7 @@
 			isa = PBXGroup;
 			children = (
 				0B4AA96A2A1E5FCB003C82FF /* MealList */,
+				0BF0F6E52A20E5E900D8D7D2 /* MealDetail */,
 				0BCF36DB29D762A60009C237 /* AddPatient */,
 				0BCF36C729D75A900009C237 /* PatientPage */,
 				0BFAEE5C29D74F3200457070 /* SignIn */,
@@ -578,6 +693,8 @@
 				0BFAEE7129D74F3200457070 /* BaseNavigationController.swift */,
 				0BFAEE7229D74F3200457070 /* Reach.swift */,
 				0BFAEE7329D74F3200457070 /* TabBarController.swift */,
+				0B8F091F2A22085E00E6471D /* ZoomableView.swift */,
+				0B8F09212A220C5000E6471D /* ZoomableTableView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -701,6 +818,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BF0F7052A20EB8200D8D7D2 /* MealDetailGroupCell.xib in Resources */,
+				0BF0F6F42A20E5E900D8D7D2 /* MealDetailView.xib in Resources */,
+				0BF0F6FB2A20E7C400D8D7D2 /* MealDetailCell.xib in Resources */,
 				0BFAEE4829D74EAE00457070 /* LaunchScreen.storyboard in Resources */,
 				0BD2714929D7C0D500161D7E /* PatientCell.xib in Resources */,
 				0BFAEE4529D74EAE00457070 /* Assets.xcassets in Resources */,
@@ -712,6 +832,7 @@
 				0BFAEE7C29D74F3200457070 /* SignInView.xib in Resources */,
 				0B4AA9792A1E5FCB003C82FF /* MealListView.xib in Resources */,
 				0BCF36BE29D7500D0009C237 /* TextFieldCell.xib in Resources */,
+				0BF0F70A2A2111AB00D8D7D2 /* MealDetailInstructionCell.xib in Resources */,
 				0BCF36F129D76D810009C237 /* DatePickerCell.xib in Resources */,
 				0B4AA9802A1E81EA003C82FF /* MealCell.xib in Resources */,
 				0BCF36F629D7707D0009C237 /* TextViewCell.xib in Resources */,
@@ -768,6 +889,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B8F09242A220E9600E6471D /* MealDetailTests.swift in Sources */,
 				0BCB14E52A1FE0DA000E8D9A /* MealListTests.swift in Sources */,
 				0BCB14DE2A1FDCC5000E8D9A /* MyPrescriptionTests.swift in Sources */,
 			);
@@ -790,17 +912,25 @@
 				0BFAEE7D29D74F3200457070 /* SignInView.swift in Sources */,
 				0B4AA9782A1E5FCB003C82FF /* MealListView.swift in Sources */,
 				0BCF36EC29D762A60009C237 /* AddPatientViewModel.swift in Sources */,
+				0BF0F6F52A20E5E900D8D7D2 /* MealDetailService.swift in Sources */,
+				0B8F09222A220C5000E6471D /* ZoomableTableView.swift in Sources */,
 				0BD2714429D7AE3600161D7E /* PatientItem+CoreDataProperties.swift in Sources */,
 				0BD2715129D81BB100161D7E /* OpenPhotoView.swift in Sources */,
+				0BF0F6F62A20E5E900D8D7D2 /* MealDetailViewModel.swift in Sources */,
+				0BF0F6FA2A20E7C400D8D7D2 /* MealDetailCell.swift in Sources */,
 				0BFAEE8629D74F3200457070 /* BaseNavigationController.swift in Sources */,
 				0BCF36F029D76D810009C237 /* DatePickerCell.swift in Sources */,
 				0BD2713C29D79EBF00161D7E /* ButtonCell.swift in Sources */,
 				0BFAEE8729D74F3200457070 /* Reach.swift in Sources */,
+				0BF0F6F22A20E5E900D8D7D2 /* MealDetailModel.swift in Sources */,
 				0B4AA9762A1E5FCB003C82FF /* MealListServiceProtocol.swift in Sources */,
 				0BD2714829D7C0D500161D7E /* PatientCell.swift in Sources */,
 				0BCF36E829D762A60009C237 /* AddPatientModel.swift in Sources */,
+				0BF0F7092A2111AB00D8D7D2 /* MealDetailInstructionCell.swift in Sources */,
+				0BF0F6F12A20E5E900D8D7D2 /* MealDetailServiceProtocol.swift in Sources */,
 				0BFAEE3B29D74EAC00457070 /* SceneDelegate.swift in Sources */,
 				0B4AA9772A1E5FCB003C82FF /* MealListModel.swift in Sources */,
+				0B8F09202A22085E00E6471D /* ZoomableView.swift in Sources */,
 				0BFAEE8029D74F3200457070 /* Global.swift in Sources */,
 				0BFAEE8229D74F3200457070 /* UITableView + Ext.swift in Sources */,
 				0BCF36D429D75A900009C237 /* PatientPageModel.swift in Sources */,
@@ -821,8 +951,10 @@
 				0BCF36D629D75A900009C237 /* PatientPageView.swift in Sources */,
 				0BCF36D829D75A900009C237 /* PatientPageViewModel.swift in Sources */,
 				0BCF36D729D75A900009C237 /* PatientPageService.swift in Sources */,
+				0BF0F6F32A20E5E900D8D7D2 /* MealDetailView.swift in Sources */,
 				0BCF36BD29D7500D0009C237 /* TextFieldCell.swift in Sources */,
 				0B4AA97B2A1E5FCB003C82FF /* MealListViewModel.swift in Sources */,
+				0BF0F7042A20EB8200D8D7D2 /* MealDetailGroupCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

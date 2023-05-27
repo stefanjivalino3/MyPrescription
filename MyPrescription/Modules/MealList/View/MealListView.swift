@@ -10,8 +10,8 @@ import UIKit
 class MealListView: UIViewController {
 
     // OUTLETS HERE
+    @IBOutlet weak var tableView: ZoomableTableView!
     @IBOutlet weak var searchView: UIView!
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!
     
     // VARIABLES HERE
@@ -22,6 +22,10 @@ class MealListView: UIViewController {
         self.setupViewModel()
         self.setupView()
         self.setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     fileprivate func setupViewModel() {
@@ -81,6 +85,12 @@ extension MealListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(with: MealCell.self)!
         cell.selectionStyle = .none
+        
+        cell.didTapViewRecipe = { [weak self] in
+            let vc = MealDetailView()
+            vc.mealId = self?.viewModel.mealData.meals?[indexPath.row].idMeal ?? ""
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
         
         cell.configure(mealTitle: viewModel.mealData.meals?[indexPath.row].strMeal ?? "",
                        mealDesc: viewModel.mealData.meals?[indexPath.row].strCategory ?? "",

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MealDetailCell" customModule="MyPrescription" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6ZA-zA-WlN">
+                        <rect key="frame" x="20" y="20" width="280" height="280"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="6ZA-zA-WlN" secondAttribute="height" id="cgq-E6-mEm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oaz-Bj-LkX">
+                        <rect key="frame" x="20" y="316" width="280" height="27"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIO-Fc-3A5">
+                        <rect key="frame" x="20" y="353" width="280" height="15.666666666666686"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yR-c6-1Og">
+                        <rect key="frame" x="20" y="373.66666666666669" width="280" height="15.666666666666686"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xb-bt-TU1">
+                        <rect key="frame" x="20" y="414.33333333333331" width="280" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6yR-c6-1Og" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1I2-51-hTj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="2xb-bt-TU1" secondAttribute="bottom" priority="200" constant="15" id="1wS-Zr-mhc"/>
+                    <constraint firstAttribute="trailing" secondItem="6ZA-zA-WlN" secondAttribute="trailing" constant="20" id="5pn-FF-ORe"/>
+                    <constraint firstAttribute="trailing" secondItem="6yR-c6-1Og" secondAttribute="trailing" constant="20" id="7Yc-5Z-R3p"/>
+                    <constraint firstItem="Oaz-Bj-LkX" firstAttribute="top" secondItem="6ZA-zA-WlN" secondAttribute="bottom" constant="16" id="AYX-p4-O0T"/>
+                    <constraint firstItem="CIO-Fc-3A5" firstAttribute="top" secondItem="Oaz-Bj-LkX" secondAttribute="bottom" constant="10" id="DZq-wi-YKr"/>
+                    <constraint firstAttribute="trailing" secondItem="2xb-bt-TU1" secondAttribute="trailing" constant="20" id="Gdf-eM-1mi"/>
+                    <constraint firstAttribute="trailing" secondItem="CIO-Fc-3A5" secondAttribute="trailing" constant="20" id="LxY-gu-4jQ"/>
+                    <constraint firstAttribute="trailing" secondItem="Oaz-Bj-LkX" secondAttribute="trailing" constant="20" id="Onw-mY-IfO"/>
+                    <constraint firstItem="6ZA-zA-WlN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="egW-NJ-Gdw"/>
+                    <constraint firstItem="Oaz-Bj-LkX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="flf-Wv-B4A"/>
+                    <constraint firstItem="2xb-bt-TU1" firstAttribute="top" secondItem="6yR-c6-1Og" secondAttribute="bottom" constant="25" id="iTK-dy-G5g"/>
+                    <constraint firstItem="6ZA-zA-WlN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="rIs-Vn-xvT"/>
+                    <constraint firstItem="CIO-Fc-3A5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="sUQ-7F-vdR"/>
+                    <constraint firstItem="2xb-bt-TU1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="scE-FV-CPV"/>
+                    <constraint firstItem="6yR-c6-1Og" firstAttribute="top" secondItem="CIO-Fc-3A5" secondAttribute="bottom" constant="5" id="xdy-WB-zTb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryLabel" destination="6yR-c6-1Og" id="wQA-ox-z08"/>
+                <outlet property="cuisineLabel" destination="CIO-Fc-3A5" id="Qdp-0i-ubg"/>
+                <outlet property="mealImageView" destination="6ZA-zA-WlN" id="NNQ-eE-TR7"/>
+                <outlet property="titleLabel" destination="Oaz-Bj-LkX" id="lZ6-MB-M0g"/>
+            </connections>
+            <point key="canvasLocation" x="44" y="20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="logo" width="133.33332824707031" height="50"/>
+    </resources>
+</document>
